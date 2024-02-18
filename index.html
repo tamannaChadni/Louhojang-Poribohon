@@ -15,6 +15,7 @@
                     colors: {
                         clifford: "#da373d",
                         "theme-color": "#1DD100",
+                        "p-color": "#03071299",
                     },
                 },
             },
@@ -76,8 +77,8 @@
                             <span class="text-theme-color">Louhojang Poribohon</span>
                         </h1>
                         <p class="mb-5 text-white">
-                            Yes, you can run unit tests and view the results directly within
-                            the app. The integrated testing features allow for a streamlined
+                            Louhojang Poribohon is apparently a family owned transport company specializing in
+                            transportation of passenger bus services since 1990
                         </p>
                         <button id="buy-ticket" class="btn text-black bg-theme-color raleway-bold">
                             Buy Tickets
@@ -153,9 +154,8 @@
                 <!-- text part -->
                 <div class="mt-5 text-center">
                     <p class="text-3xl raleway-extrabold text-[#030712]">Louhojang Poribohon</p>
-                    <p class="mt-2">Yes, you can run unit tests and view the results directly within the app. The
-                        integrated
-                        <br> testing features allow for a streamlined .
+                    <p class="mt-2">Louhojang Poribohon is apparently a family owned transport company specializing in
+                        <br> transportation of passenger bus services since 1990
                     </p>
                 </div>
                 <!-- text part -->
@@ -167,8 +167,10 @@
                             <div class="flex justify-between gap-5 mb-4">
                                 <div class="flex gap-1 ">
                                     <img src="./images/bus-logo.png" alt="" srcset="">
-                                    <h1p>Louhojang Poribohon</h1>
-                                        <p>Coach-009-WEB ! AC_Business</p>
+                                    <div>
+                                        <h1 class="raleway-bold text-xl">Louhojang Poribohon</h1>
+                                        <h2 class="text-p-color">Coach-009-WEB ! AC_Business</h2>
+                                    </div>
                                 </div>
                                 <button class="bg-[#1dd1001A] rounded p-2">
                                     <div class="flex gap-1 items-center">
@@ -180,19 +182,19 @@
                                 </button>
                             </div>
                             <div>
-                                <div class="divide-y divide-dashed bg-slate-100 p-2 rounded">
+                                <div class="divide-y divide-dashed bg-slate-100 p-2 rounded space-y-2">
                                     <div class="flex justify-between">
-                                        <p>Rounte</p>
-                                        <p>Dhaka - Sylhet</p>
+                                        <p class="text-p-color">Rounte</p>
+                                        <p class="raleway-bold text-lg">Dhaka - Louhojang</p>
                                     </div>
                                     <div class="flex justify-between">
-                                        <p>Departure Time</p>
-                                        <p>9.00 PM</p>
+                                        <p class="text-p-color">Departure Time</p>
+                                        <p class="raleway-bold text-lg">9.00 PM</p>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="flex justify-center gap-4 ">
-                                            <button class="btn btn-active">Boarding Point - Laxmipur</button>
-                                            <button class="btn btn-active">Dropping Point - Bogura</button>
+                                            <button class="btn btn-active">Boarding Point - Mawya</button>
+                                            <button class="btn btn-active">Dropping Point - Bazar</button>
                                             <button class="btn btn-active">Est. Time - 11 Hour</button>
                                         </div>
                                     </div>
@@ -209,8 +211,8 @@
                                 <div class="mx-auto">
                                     <img src="./images/fare.png" alt="">
                                 </div>
-                                <h1>550TAKA</h1>
-                                <p>per seat</p>
+                                <h1 class="raleway-extrabold text-xl">550TAKA</h1>
+                                <p class="text-p-color">per seat</p>
                             </div>
                         </div>
 
@@ -218,6 +220,161 @@
                     </div>
                 </div>
                 <!-- ticket part -->
+                <!-- functional part start -->
+                <div class="container mt-5 mx-auto">
+                    <div
+                        class="bg-white rounded grid grid-cols-2  divide-x-2 divide-dashed divide-green-100 p-5 space-x-2">
+                        <!-- 1st part -->
+                        <div class="">
+                            <div class="space-y-2 divide-y-2 divide-dashed divide-green-100">
+                                <h1 class="raleway-bold text-lg">Select Your Seat</h1>
+                                <div class="flex justify-between pr-2">
+                                    <div class="flex gap-1">
+                                        <img src="./images/seat-gray.png" alt="">
+                                        <p class="text-p-color">Available</p>
+                                    </div>
+                                    <div class="flex gap-1">
+                                        <img src="./images/seat-green.png" alt="">
+                                        <p class="text-theme-color">Selected</p>
+                                    </div>
+                                </div>
+                                <div class="text-end pr-2 ">
+                                    <button class="bg-slate-300 rounded btn"><img
+                                            src="./images/tabler-icon-steering-wheel.png" alt=""></button>
+                                </div>
+
+
+                            </div>
+                            <!-- seat -->
+                            <div class="mt-2 grid grid-cols-4 grid-rows-3 gap-3">
+
+                                <button id="A1" class="btn btn-active">A1</button>
+                                <button id="A2" class="btn btn-active">A2</button>
+                                <button id="A3" class="btn btn-active">A3</button>
+                                <button id="A4" class="btn btn-active">A4</button>
+                                <button id="B1" class="btn btn-active">B1</button>
+                                <button id="B2" class="btn btn-active">B2</button>
+                                <button id="B3" class="btn btn-active">B3</button>
+                                <button id="B4" class="btn btn-active">B4</button>
+                                <button id="C1" class="btn btn-active">C1</button>
+                                <button id="C2" class="btn btn-active">C2</button>
+                                <button id="C3" class="btn btn-active">C3</button>
+                                <button id="C4" class="btn btn-active">C4</button>
+                                <button id="D1" class="btn btn-active">D1</button>
+                                <button id="D2" class="btn btn-active">D2</button>
+                                <button id="D3" class="btn btn-active">D3</button>
+                                <button id="D4" class="btn btn-active">D4</button>
+                                <button id="E1" class="btn btn-active">E1</button>
+                                <button id="E2" class="btn btn-active">E2</button>
+                                <button id="E3" class="btn btn-active">E3</button>
+                                <button id="E4" class="btn btn-active">E4</button>
+                                <button id="F1" class="btn btn-active">F1</button>
+                                <button id="F2" class="btn btn-active">F2</button>
+                                <button id="F3" class="btn btn-active">F3</button>
+                                <button id="F4" class="btn btn-active">F4</button>
+                                <button id="G1" class="btn btn-active">G1</button>
+                                <button id="G2" class="btn btn-active">G2</button>
+                                <button id="G3" class="btn btn-active">G3</button>
+                                <button id="G4" class="btn btn-active">G4</button>
+                                <button id="H1" class="btn btn-active">H1</button>
+                                <button id="H2" class="btn btn-active">H2</button>
+                                <button id="H3" class="btn btn-active">H3</button>
+                                <button id="H4" class="btn btn-active">H4</button>
+
+                            </div>
+                            <!-- seat -->
+                        </div>
+                        <!-- 1st part -->
+                        <!-- 2nd part -->
+                        <div>
+                            <div class="space-y-2 divide-y-2 divide-dashed divide-green-100 pl-5 ">
+                                <h1 class="raleway-bold text-lg">Select Your Seat</h1>
+                                <div class="bg-slate-100 rounded-lg">
+                                    <div class="overflow-x-auto">
+                                        <table class="table">
+                                            <!-- head -->
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>Name</th>
+                                                    <th>Job</th>
+                                                    <th>Favorite Color</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- row 1 -->
+                                                <tr>
+                                                    <th>1</th>
+                                                    <td>Cy Ganderton</td>
+                                                    <td>Quality Control Specialist</td>
+                                                    <td>Blue</td>
+                                                </tr>
+                                                <!-- row 2 -->
+                                                <tr>
+                                                    <th>2</th>
+                                                    <td>Hart Hagerty</td>
+                                                    <td>Desktop Support Technician</td>
+                                                    <td>Purple</td>
+                                                </tr>
+                                                <!-- row 3 -->
+                                                <tr>
+                                                    <th>3</th>
+                                                    <td>Brice Swyre</td>
+                                                    <td>Tax Accountant</td>
+                                                    <td>Red</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pl-5 mt-2">
+                                <!-- 1t -->
+                                <label class="form-control w-full max-w-xs">
+                                    <div class="label">
+                                        <span class="label-text raleway-bold ">Passenger Name*</span>
+                                    </div>
+                                    <input type="text" placeholder="Enter your name"
+                                        class="input input-bordered w-full max-w-xs" />
+                                </label>
+                                <!-- 1t -->
+                                <!-- 2nd -->
+                                <label class="form-control w-full max-w-xs">
+                                    <div class="label">
+                                        <span class="label-text raleway-bold">Phone Number*</span>
+                                    </div>
+                                    <input type="text" placeholder="Enter your phone number"
+                                        class="input input-bordered w-full max-w-xs" />
+                                </label>
+                                <!-- 2nd -->
+                                <!-- 3rd -->
+                                <label class="form-control w-full max-w-xs">
+                                    <div class="label">
+                                        <span class="label-text raleway-bold">Email ID</span>
+                                    </div>
+                                    <input type="text" placeholder="Enter your email id"
+                                        class="input input-bordered w-full max-w-xs" />
+                                </label>
+                                <!-- 3rd -->
+
+                            </div>
+                            <div class="pl-5 mt-2 text-center w-full">
+                                <button id="next"
+                                    class="btn bg-theme-color text-white rounded-xl w-full p-3 text-xl font-bold">Next</button>
+
+                            </div>
+                            <div class="pl-5 mt-2 flex gap-4 justify-center">
+                                <p class="text-p-color">Terms and Conditions</p>
+                                <p class="text-p-color">Cancellation Policy</p>
+
+                            </div>
+                        </div>
+                        <!-- 2nd part -->
+
+                    </div>
+
+                </div>
+                <!-- functional part end -->
 
             </div>
         </div>
