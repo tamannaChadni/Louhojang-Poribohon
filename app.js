@@ -12,7 +12,6 @@ const seatNumber = document.getElementById("seat-number");
 
 seatNumber.addEventListener("click", (event) => {
   if (event.target.tagName === "BUTTON") {
-    
     const seatBtn = event.target;
 
     seatBooked = true;
@@ -36,7 +35,6 @@ seatNumber.addEventListener("click", (event) => {
     const remainingSeat = availableSeatEl.innerText - 1;
     availableSeatEl.innerText = remainingSeat;
 
-    
     const classSeat = "Economic class";
     const price = parseInt(550);
 
@@ -60,14 +58,11 @@ document.getElementById("phone-number").addEventListener("keyup", (event) => {
   } else {
     document.getElementById("nextBtn").disabled = true;
   }
-  
 });
 
 const applyBtn = document.getElementById("btn-apply");
 applyBtn.addEventListener("click", function () {
-  
   const cuponElement = document.getElementById("cupon-field").value;
-  
 
   if (cuponElement === "NEW15") {
     const discountAmount = totalPrice * 0.15;
@@ -84,8 +79,18 @@ applyBtn.addEventListener("click", function () {
     const totalAmount = totalPrice - discountAmount;
     grandPrice.innerText = totalAmount;
     document.getElementById("cupon-field").value = "";
+
+    const cuponSection = document.getElementById("cupon-section");
+    cuponSection.classList.add("hidden");
   } else {
     alert("Invaild cupon");
     document.getElementById("cupon-field").value = "";
+    const cuponSection = document.getElementById("cupon-section");
+    cuponSection.classList.add("hidden");
   }
+});
+
+const nextBtn = document.getElementById("nextBtn");
+nextBtn.addEventListener("click", () => {
+  document.getElementById("my_modal_1").showModal();
 });
