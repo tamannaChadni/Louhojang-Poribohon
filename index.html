@@ -367,7 +367,7 @@
                                     <div class="label">
                                         <span class="label-text raleway-bold">Phone Number*</span>
                                     </div>
-                                    <input type="text" placeholder="Enter your phone number"
+                                    <input id="phone-number" type="number" placeholder="Enter your phone number"
                                         class="input input-bordered w-full max-w-xs" />
                                 </label>
                                 <!-- 2nd -->
@@ -383,8 +383,9 @@
 
                             </div>
                             <div class="pl-5 mt-2 text-center w-full">
-                                <button onclick="modal()" id="next"
-                                    class="btn bg-theme-color text-white rounded-xl w-full p-3 text-xl font-bold">Next</button>
+                                <button onclick="modal()" id="nextBtn"
+                                    class="btn bg-theme-color text-white rounded-xl w-full p-3 text-xl font-bold"
+                                    disabled>Next</button>
 
                             </div>
                             <div class="pl-5 mt-2 flex gap-4 justify-center">
@@ -445,7 +446,7 @@
 
     </footer>
 
-    <div id="modal" class="container mx-auto my-8 hidden">
+    <div id="modal" class="container mx-auto my-8 ">
         <div class="modal-box text-center">
             <div><img class="mx-auto " src="./images/success.png" alt=""></div>
             <h3 class="font-bold text-lg text-[#27AE60]">SUCCESS</h3>

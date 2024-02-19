@@ -6,13 +6,16 @@ function mainSection() {
 
 let totalPrice = 0;
 let gradTotal = 0;
+let seatBooked = false;
 
 const seatNumber = document.getElementById("seat-number");
 
 seatNumber.addEventListener("click", (event) => {
   if (event.target.tagName === "BUTTON") {
-    // console.log("button was clicked");
+    
     const seatBtn = event.target;
+
+    seatBooked = true;
 
     // showing booked seat details
     const addSeatEl = document.getElementById("add-seat");
@@ -33,10 +36,7 @@ seatNumber.addEventListener("click", (event) => {
     const remainingSeat = availableSeatEl.innerText - 1;
     availableSeatEl.innerText = remainingSeat;
 
-    // const seatName = seatNumber.querySelector("button").innerText;
-    // const seatName = document.getElementById("seat-number").innerText;
-    // console.log(seatName);
-
+    
     const classSeat = "Economic class";
     const price = parseInt(550);
 
@@ -54,31 +54,37 @@ seatNumber.addEventListener("click", (event) => {
   }
 });
 
+document.getElementById("phone-number").addEventListener("keyup", (event) => {
+  if (seatBooked && event.target.value.length > 4) {
+    document.getElementById("nextBtn").disabled = false;
+  } else {
+    document.getElementById("nextBtn").disabled = true;
+  }
+  
+});
+
 const applyBtn = document.getElementById("btn-apply");
 applyBtn.addEventListener("click", function () {
-  // console.log("clicked");
+  
   const cuponElement = document.getElementById("cupon-field").value;
-  // console.log(cuponElement);
+  
 
-  if (cuponElement === 'NEW15') {
+  if (cuponElement === "NEW15") {
     const discountAmount = totalPrice * 0.15;
     const grandPrice = document.getElementById("grand-price");
     const totalAmount = totalPrice - discountAmount;
     grandPrice.innerText = totalAmount;
     document.getElementById("cupon-field").value = "";
 
-    const cuponSection = document.getElementById('cupon-section');
-    cuponSection.classList.add('hidden');
-
-  } 
-  else if (cuponElement === 'Couple 20') {
+    const cuponSection = document.getElementById("cupon-section");
+    cuponSection.classList.add("hidden");
+  } else if (cuponElement === "Couple 20") {
     const discountAmount = totalPrice * 0.2;
     const grandPrice = document.getElementById("grand-price");
     const totalAmount = totalPrice - discountAmount;
     grandPrice.innerText = totalAmount;
     document.getElementById("cupon-field").value = "";
-  } 
-  else {
+  } else {
     alert("Invaild cupon");
     document.getElementById("cupon-field").value = "";
   }
