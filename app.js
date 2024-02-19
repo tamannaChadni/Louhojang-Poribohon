@@ -37,11 +37,22 @@ seatNumber.addEventListener("click", (event) => {
 
     const classSeat = "Economic class";
     const price = parseInt(550);
-
-    const seatDetails = document.getElementById("seat-details");
-    const p = document.createElement("p");
-    p.innerText = seatBtn.innerText + " " + classSeat + " " + price;
-    seatDetails.appendChild(p);
+    // td related info
+    const seatDetails = document.querySelector("#table tbody");
+    const tr = document.createElement("tr");
+    const td0 = document.createElement("td");
+    const td1 = document.createElement("td");
+    const td2 = document.createElement("td");
+    const td3 = document.createElement("td");
+    // const p = document.createElement("p");
+    td1.innerText = seatBtn.innerText;
+    td2.innerText = classSeat;
+    td3.innerText = price;
+    tr.appendChild(td0);
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    seatDetails.prepend(tr);
 
     // calculate price
     totalPrice += price;
