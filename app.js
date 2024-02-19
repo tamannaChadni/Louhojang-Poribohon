@@ -93,8 +93,10 @@ applyBtn.addEventListener("click", function () {
   } else if (cuponElement === "Couple 20") {
     const discountAmount = totalPrice * 0.2;
     const grandPrice = document.getElementById("grand-price");
+    const discountPrice = document.getElementById("discount-price");
     const totalAmount = totalPrice - discountAmount;
     grandPrice.innerText = totalAmount;
+    discountPrice.innerText = discountAmount;
     document.getElementById("cupon-field").value = "";
 
     const cuponSection = document.getElementById("cupon-section");
