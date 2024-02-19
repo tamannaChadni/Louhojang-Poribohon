@@ -7,6 +7,7 @@ function mainSection() {
 let totalPrice = 0;
 let gradTotal = 0;
 let seatBooked = false;
+let totalBookedSeat;
 
 const seatNumber = document.getElementById("seat-number");
 
@@ -18,12 +19,15 @@ seatNumber.addEventListener("click", (event) => {
 
     // showing booked seat details
     const addSeatEl = document.getElementById("add-seat");
-    let totalBookedSeat = parseInt(addSeatEl.innerText);
-    if (totalBookedSeat > 3) {
+    totalBookedSeat = parseInt(addSeatEl.innerText);
+    totalBookedSeat++;
+    if (totalBookedSeat == 4) {
+      document.getElementById("btn-apply").disabled = false;
+    }
+    if (totalBookedSeat > 4) {
       alert("You can not book more than 4 seats");
       return;
     }
-    totalBookedSeat++;
     addSeatEl.innerText = totalBookedSeat;
 
     // disable and change the button color
@@ -44,7 +48,7 @@ seatNumber.addEventListener("click", (event) => {
     const td1 = document.createElement("td");
     const td2 = document.createElement("td");
     const td3 = document.createElement("td");
-    // const p = document.createElement("p");
+
     td1.innerText = seatBtn.innerText;
     td2.innerText = classSeat;
     td3.innerText = price;
@@ -78,8 +82,10 @@ applyBtn.addEventListener("click", function () {
   if (cuponElement === "NEW15") {
     const discountAmount = totalPrice * 0.15;
     const grandPrice = document.getElementById("grand-price");
+    const discountPrice = document.getElementById("discount-price");
     const totalAmount = totalPrice - discountAmount;
     grandPrice.innerText = totalAmount;
+    discountPrice.innerText = discountAmount;
     document.getElementById("cupon-field").value = "";
 
     const cuponSection = document.getElementById("cupon-section");
